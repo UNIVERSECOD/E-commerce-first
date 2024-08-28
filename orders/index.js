@@ -1,4 +1,6 @@
 const tableContent = document.querySelector(".table-content")
+const cartElementLength = document.querySelector("#cart-length")
+
 function fillTable() {
     const products = getCartItems ();
     products.forEach((product) => {
@@ -16,11 +18,11 @@ function fillTable() {
          rowElement.querySelector("img").addEventListener("click", () => {
             removeFromCart(product);
             rowElement.remove();
-    });
+})
 
         tableContent.append(rowElement);
-        
-    });
+
+   })};
 
 function removeFromCart(product) {
     const cart = getCartItems();
@@ -29,6 +31,7 @@ function removeFromCart(product) {
         cart.splice(productIdx, 1);
         setCart(cart);
     }
+    countCartItems()
 }
 
 
@@ -40,6 +43,17 @@ function getCartItems(){
 function setCart(cart){
     localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+function countCartItems(){
+ const count = getCartItems().length;
+ const hasAnyItem = count > 0;
+ if(count>0); 
+ cartElementLength.style.display = hasAnyItem ? "inline":"none";
+ cartElementLength.textContent = hasAnyItem ? count : 0;
+
+}
+
+countCartItems()
 
 fillTable();
 
