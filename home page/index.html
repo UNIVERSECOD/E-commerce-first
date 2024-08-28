@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Products</title>
+</head>
+<script defer src="../data/products.js"></script>
+<script defer src="./index.js"></script>
+<body>
+    <nav>
+        <!-- <div class="container"> -->
+            <h1>CodE-Commerce</h1>
+            <a href="../orders/index.html"> 
+                <img width="20" src="../assets/simple-cart.svg" alt="Cart svg">
+            </a>
+        <!-- </div> -->
+    </nav>
+    <div class="container">
+        <h1>Products</h1>
+
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
+                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Title</a></div>
+                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Description</a>
+                </div>
+                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Price</a>
+                </div>
+                <!-- <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Count</a>
+                </div> -->
+                    <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Action</a>
+                </div>
+            </div>
+            <div class="table-content">
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
